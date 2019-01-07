@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    tools:context=".SearchItem">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@string/str_itemsearch"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_searchname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_itemsearchname"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/fld_searchname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_searchname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search" />
+
+        <TextView
+            android:id="@+id/lbl_searchcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_itemsearchcategory"
+            android:textAlignment="center" />
+
+        <Spinner
+            android:id="@+id/spn_searchcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_searchcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search" />
+
+        <TextView
+            android:id="@+id/lbl_searchprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_itemsearchprice"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/fld_searchprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_searchprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search" />
+
+        <TextView
+            android:id="@+id/lbl_searchuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_itemsearchuser"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/fld_searchuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_searchuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search" />
+    </LinearLayout>
+
+</LinearLayout>

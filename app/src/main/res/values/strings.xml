@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">QuickTrade</string>
+
+    <string name="hnt_email">E-Mail</string>
+    <string name="hnt_password">Contraseña</string>
+    <string name="hnt_itemname">Nombre producto</string>
+    <string name="hnt_itemdescription">Descripcion producto</string>
+
+
+    <string name="str_main">Bienvenido a QuickTrade</string>
+    <string name="str_newuser">Registrar Nuevo Ususario</string>
+    <string name="str_newitem">Añadir nuevo producto</string>
+    <string name="str_noitems">Aun no hay ningun porduco, prueba a añadir uno</string>
+    <string name="str_itemname">Nombre del producto</string>
+    <string name="str_itemdescription">Descripcion del producto</string>
+    <string name="str_itemcategory">Categoria del producto</string>
+    <string name="str_itemprice">Precio del producto</string>
+    <string name="str_ownitem">Mi producto</string>
+    <string name="str_name">Nombre:</string>
+    <string name="str_description">Descripcion:</string>
+    <string name="str_category">Categoria:</string>
+    <string name="str_price">Precio:</string>
+    <string name="str_usernameitem">Producto de:</string>
+    <string name="str_itemsearch">Busqueda de Productos</string>
+    <string name="str_itemsearchname">Busqueda por Nombre:</string>
+    <string name="str_itemsearchcategory">Busqueda por Categoria:</string>
+    <string name="str_itemsearchprice">Busqueda por Precio:</string>
+    <string name="str_itemsearchuser">Busqueda por Usuario:</string>
+
+
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_new">Nuevo usuario</string>
+    <string name="btn_singin">Registrase</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_settings">Ajustes de cuenta</string>
+    <string name="btn_items">Ver Productos</string>
+    <string name="btn_itemsearch">Buscar Productos</string>
+    <string name="btn_additem">Añadir nuevo Producto</string>
+    <string name="btn_adminitems">Administrar Productos</string>
+    <string name="btn_updateaccount">Actualizar Datos de cuenta</string>
+    <string name="btn_updateitem">Actualizar Datos del producto</string>
+    <string name="btn_deleteitem">Eliminar Producto</string>
+    <string name="btn_search">Buscar</string>
+
+
+    <string name="fld_username">Nombre de Usario</string>
+    <string name="fld_name">Nombre</string>
+    <string name="fld_lastname">Apellidos</string>
+    <string name="fld_address">Direccion</string>
+
+
+    <string name="msg_noemail">El campo de el email no puede dejarse vacio</string>
+    <string name="msg_nopassword">El campo de la contraseña no puede dejarse vacio</string>
+    <string name="msg_nousername">El campo de el nombre de usuario no puede dejarse vacio</string>
+    <string name="msg_noname">El campo de el nombre no puede dejarse vacio</string>
+    <string name="msg_nolastname">El campo de el apellido no puede dejarse vacio</string>
+    <string name="msg_noaddress">El campo de la direccion no puede dejarse vacio</string>
+    <string name="msg_existinguser">Ese nombre de usuario ya existe, por favor, seleccione otro</string>
+    <string name="msg_existingitem">Ya existe un producto con ese nombre</string>
+
+
+    <string name="ttl_1">Enhorabuena, Has iniciado sesion correctamente</string>
+    <string name="ttl_2">APP BAJO CONSTRUCCION</string>
+</resources>
