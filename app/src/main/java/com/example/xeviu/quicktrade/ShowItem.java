@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,9 +20,11 @@ import com.google.firebase.database.ValueEventListener;
 public class ShowItem extends AppCompatActivity {
 
     private TextView t_itemname,t_description,t_category,t_price,t_username;
-    private DatabaseReference db,db2;
+    private Button b_fav;
+    private DatabaseReference db,db2,db3;
     private FirebaseAuth mAuth;
-    private String user;
+    private String user,item;
+    private boolean isfav=false;
 
 
 
@@ -33,8 +37,6 @@ public class ShowItem extends AppCompatActivity {
             String itemname = extras.getString("itemname");
             //The key argument here must match that used in the other activity
 
-
-
             mAuth = FirebaseAuth.getInstance();
 
             t_itemname=(TextView)findViewById(R.id.tit_itemname);
@@ -42,13 +44,11 @@ public class ShowItem extends AppCompatActivity {
             t_category=(TextView)findViewById(R.id.txt_category);
             t_price=(TextView)findViewById(R.id.txt_price);
             t_username=(TextView)findViewById(R.id.txt_username);
+            b_fav=(Button)findViewById(R.id.btn_fav);
 
             db=FirebaseDatabase.getInstance().getReference("productos");
             db2=FirebaseDatabase.getInstance().getReference("usuarios");
-
-
-
-
+            db3=FirebaseDatabase.getInstance().getReference("bookmark");
 
            db.orderByChild("name").equalTo(itemname).addValueEventListener(new ValueEventListener() {
                 @Override
@@ -92,10 +92,56 @@ public class ShowItem extends AppCompatActivity {
 
                 }
             });
+
+
+           db3.orderByChild("item").equalTo(itemname).addValueEventListener(new ValueEventListener() {
+               @Override
+               public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                   db3.orderByChild("user").equalTo(mAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                       @Override
+                       public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                           isfav=true;
+
+                       }
+
+                       @Override
+                       public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                       }
+                   });
+               }
+
+               @Override
+               public void onCancelled(@NonNull DatabaseError databaseError) {
+
+               }
+           });
+
+           if (isfav==false){
+               b_fav.setText("Añadir a favoritos");
+               b_fav.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       user=mAuth.getUid();
+                       item=t_itemname.getText().toString();
+                       adddb(user,item);
+                   }
+               });
+           }
+           else if (isfav==true){
+               b_fav.setText("Esta en favoritos");
+           }
+
+
         }
 
 
+    }
 
-
+    private void adddb(String user,String item)
+    {
+        String key=db.push().getKey();
+        Bookmark bm = new Bookmark(user,item);
+        db.child(key).setValue(bm);
     }
 }

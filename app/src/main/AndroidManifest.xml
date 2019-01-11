@@ -25,7 +25,8 @@
         <activity android:name=".ShowItem" />
         <activity android:name=".OwnItem" />
         <activity android:name=".SearchItem" />
-        <activity android:name=".SearchItemResult"></activity>
+        <activity android:name=".SearchItemResult" />
+        <activity android:name=".ShowBookmark"></activity>
     </application>
 
 </manifest>

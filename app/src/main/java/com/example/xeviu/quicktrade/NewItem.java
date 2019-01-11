@@ -53,9 +53,6 @@ public class NewItem extends AppCompatActivity {
 
         db=FirebaseDatabase.getInstance().getReference("productos");
 
-
-
-
         mAuth = FirebaseAuth.getInstance();
 
         b_add.setOnClickListener(new View.OnClickListener() {
